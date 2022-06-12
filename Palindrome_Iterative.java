@@ -1,6 +1,7 @@
 // @author: Joseph Walker
 
 // Palindrome: 		 a word, phrase, or sequence that reads the SAME backward as it does forward (racecar, mom, nurses run)
+// ITERATIVE method of solving a palindrome.
  					 
 public class Palindrome {
 
