@@ -5,8 +5,7 @@ public class Reverse_Words {
 	
 	public static void main(String[] args) {
 		
-		System.out.println(spinWords("I'm the absolute best throughout the land!"));
-		
+	System.out.println(spinWords("I'm the absolute best throughout the land!"));
 	}
 	public static String spinWords(String sentence) {
 	    String[] words = sentence.split(" ");
