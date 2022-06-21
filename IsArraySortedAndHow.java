@@ -12,7 +12,6 @@ public class IsArraySortedAndHow {
 		System.out.println(isSortedAndHow(nums));
 		System.out.println(isSortedAndHow(nums2));
 		System.out.println(isSortedAndHow(nums3));
-
 	}
 
 	public static String isSortedAndHow(int[] array) {
