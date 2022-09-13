@@ -8,7 +8,6 @@ public class Palindrome_Recursive {
 
 	public static void main(String[] args) {
 		
-
 		String str = "nurses run";
 		
 // Omit spaces in Java by using .replace() method which passes 2 args, similar
