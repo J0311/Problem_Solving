@@ -6,7 +6,6 @@ public class PrimeOrNot {
 		 * Take an integer input from the user.
 		 * Print YES if it is prime number 
 		 * Print NO if it not a prime number. 
-
 		 */
 		
 		Scanner scan = new Scanner(System.in);
