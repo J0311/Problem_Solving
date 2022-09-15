@@ -20,21 +20,29 @@ public class PrimeOrNot {
 		// set condition to i < a/2 because half of the int is 
 		// all that's necessary to determine whether or not it's prime
 		
-		for (int i = 2; i < a/2; i++) {
-			if(a % i == 0) { 
+		do {
+			System.out.println("Please enter a number: ");
+			a = scan.nextInt();
+
+			for (int i = 2; i < a/2; i++) {
+				if(a % i == 0) { 
+				
 				// if input a is divisible by any number between
 				// 1 and itself, our isPrime boolean evaluates to false
-			isPrime = false;
-			break;
+				
+					isPrime = false;
+					break;
 			}
+		    }
 		}
 		
+		while( a < 0);		
 		if (isPrime) {
 			System.out.println("YES");
 		}
 		else {
 			System.out.println("NO");
-		}
-		
+		}	
     }
+	
 	}
