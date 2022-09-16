@@ -1,0 +1,44 @@
+/**	Given an array of integers nums and an integer target, return 
+	 * indices of the two numbers such that they add up to target.
+		You may assume that each input would have exactly one solution, 
+		and you may not use the same element twice.
+	*/
+  
+  public class TwoSum {
+
+    	public static void main(String[] args) {
+      
+      /*
+      BRUTE FORCE ALGORITHM
+      */
+      
+      }
+      
+      public static int[] twoSum(int[] nums, int target) {
+			
+			//start at 0 index
+			for (int i = 0; i < nums.length; i++) {
+      
+				// start with i at 0, loop through each number
+				// AFTER "5" element in our array, and ADD it to 
+				// "5" to see if it equals our trgt (6)
+				
+				// we DON'T want to start off with j = 0 because
+				// we don't want to add the first number to itself
+        
+				for (int j = i + 1; j < nums.length; j++) {
+        
+					// Inside our 4 loop, we have to 2 elements we need to 
+					// add in order to see if they equal our trgt
+					// If yes, return those 2 indices
+          
+					if ( nums[i] + nums[j] == target) {
+						return new int[] {i,j};
+					
+				}
+			}
+			}
+			return nums; // In case trg indices not found, required to return arr by default
+		}
+		
+	    }	
