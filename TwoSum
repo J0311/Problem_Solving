@@ -41,4 +41,77 @@
 			return nums; // In case trg indices not found, required to return arr by default
 		}
 		
+		// OPTIMIZED SOLUTIONS w/HASHMAP
+		
+		
+		public static int[] twoSumHashMap(int[] nums, int target) {
+			
+			/*
+			 * HashMap has time complexity of O(1)
+			 * we'll loop through array 1 time and each
+			 * iteration, we'll add something to our map:
+			 * 
+			 * Loop through array: for each element we look at, 
+			 * we'll store the number we'd have to add in order
+			 * to get our TARGET
+			 * 
+			 * That will be the KEY we add to our HashMap. 
+			 * For example, if target = 6, and first element in 
+			 * arr = 5, we would add to our HashMap the Key of 1, 
+			 * which maps to the value of 0, the index. 
+			 * 
+			 * Now as we keep iterating through array, we know if we 
+			 * encounter the #1, we know we can add it to element 
+			 * at index 0 to equal our TARGET.
+			 * 
+			 * First, we'll loop through array and check if any elements
+			 * exists as a Key in our Map. If it does, we've found our 
+			 * match. In that case, we just need to return the indices of 
+			 * those 2 numbers.
+			 * 
+			 * One of them is the index of the current number we're looping
+			 * through and the index of the OTHER number we need to return 
+			 * is just going to be stored at that location in our HashMap.
+			 * 
+			 *  // array = {5, 2, 4}
+			 * 	// target = 6
+			 * 
+			 * // HashMap
+			 * // K -> V
+			 * // 1 -> 0
+			 * // 4 -> 1
+			 * 
+			 *  We know the index returned will be new int [] {1,2}
+			 */
+			
+			Map <Integer,Integer> complements = new HashMap<>();
+			
+			/** Inside for loop, for each number we look at, we 
+			* want to see if number exists as a key in our Map.
+			* We do this by calling .get() method to extract array
+			* element value
+			* If it doesn't exist, will just return null. We'll store
+			* in a value called "complementIndex".
+			*/
+			
+			for (int i = 0; i < nums.length; i++) {
+				
+				// this does NOT give the value in arr, just the INDEX:
+				Integer complementIndex = complements.get(nums[i]);
+				// If not null, we know we've found a match, return indices 
+				if (complementIndex != null) {
+					// first index is "i", the index of number we're looping through
+					// next is the number we can add to that number to get our target, 
+					// which we know is stored at the complement index
+					return new int[]{i, complementIndex};
+				}
+				// We want the KEY to be the "complement" for the number that we're looking at
+				// We have to add to that number to get our target. We can do that with simple
+				// subtraction with target-nums[i]. 
+				// For second parameter for value we want it to be the index we're currently at
+				complements.put(target - nums[i], i);
+			}
+			return nums;
+		}
+		
 	    }	
