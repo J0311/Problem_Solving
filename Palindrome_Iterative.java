@@ -12,7 +12,7 @@ public class Palindrome {
 		// to how .replace() method works in Python.
 		
 		String original = "race car";
-		original = original.replace(" ", "");
+		original = original.replace(" ", "").replace(",", "").replace("'", "");
 		
 		// ensure for 1st part of conditional statement, set string.length to - 1 
 		// because we know indices start at 0 index and onward
