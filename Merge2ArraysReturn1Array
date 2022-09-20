@@ -1,0 +1,45 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class MergeAndSort {
+
+	public static void main(String[] args) {
+
+		int[] arr1 = { 1, 2,2, 3, 4, 5 };
+		int[] arr2 = { 6, 7,7, 8, 9, 10 };
+
+		List<Integer> merged = new ArrayList<>();
+
+		mergeArrays(arr1,arr2);
+	}
+
+	public static int [] mergeArrays(int[] first, int[] second) {
+
+		List<Integer> merged = new ArrayList<>();
+		for (int i = 0; i < first.length; i++) {
+			merged.add(first[i]);
+		}
+		for (int i = 0; i < second.length; i++) {
+			merged.add(second[i]);
+		}
+		Set<Integer> hashMerge = new HashSet(merged);
+		
+		for (Integer x: hashMerge) {
+			System.out.print(x);
+		}
+		int [] finalMerge = new int[hashMerge.size()];
+    
+		int count = 0;
+    
+		for (int i: hashMerge) {
+			finalMerge[count++] = i;
+		}
+		Arrays.sort(finalMerge);
+		
+		return finalMerge;
+	}
+}
