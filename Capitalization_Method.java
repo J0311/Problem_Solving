@@ -1,4 +1,4 @@
-//@author Joseph Walker
+//@author Joseph 
 
 // This is the same concept as our program which capitalizes a String phrase.
 // However, this class is more concise and compresses functionality into a
