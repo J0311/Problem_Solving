@@ -12,7 +12,7 @@ public class Capitalization_Method {
 		
 	}
 	
-// Our toCapCase method is the heart of everything; 
+// Our toCapCase method is the heart of everything
 // We pass the String "phrase", ensuring if String is null or
 // empty, we return null. 
 	
